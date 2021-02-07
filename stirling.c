@@ -39,20 +39,21 @@ int main(){
     while(1){
         printf("\nPress 1 if you want to calculate stirling numbers of the first kind\nPress 2 if you want to calculate stirling numbers of the second kind\n\nI want? ");
         scanf("%d",&option);
+        printf("====================\n");
         switch(option){
             case 1:	
-                printf("\n\n\ns(n,k)\n\nPut the value of n\nn = ");
+                printf("\ns(n,k)\n\nPut the value of n:\nn = ");
                 scanf("%d",&n);
-                printf("\nNow put the value of k\nk= ");
+                printf("\nNow put the value of k:\nk= ");
                 scanf("%d",&k);
-                printf("\nThe result of stirling numbers of the first kind is \n\ns(%d, %d) = %d\n\n",n,k, first_stirling(n,k));
+                printf("====================\n\nThe result of stirling numbers of the first kind is \n\ns(%d, %d) = %d\n\n===============================\n",n,k, first_stirling(n,k));
                 break;
             case 2: 	
-                printf("\n\n\ns(n,k)\n\nPut the value of n\nn = ");
+                printf("\ns(n,k)\n\nPut the value of n:\nn = ");
                 scanf("%d",&n);
-                printf("\nNow put the value of k\nk= ");
+                printf("\nNow put the value of k:\nk= ");
                 scanf("%d",&k);
-                printf("\nThe result of stirling numbers of the second kind is \n\ns(%d, %d) = %d\n\n",n,k, second_stirling(n,k));
+                printf("====================\n\nThe result of stirling numbers of the second kind is \n\ns(%d, %d) = %d\n\n==============================\n",n,k, second_stirling(n,k));
                 break;
             default:
                 printf("Sorry I didn't understand you\nlet's start again\n");		
@@ -60,10 +61,10 @@ int main(){
         printf("Do you want to exit (y/n)?\n");
         scanf("%c",&exit);
         scanf("%c",&exit);
-        if(exit == 'y' || exit == 'Y'){
-            break;
-        }else if(exit == 'n' || exit == 'N'){
+        if(exit == 'n' || exit == 'N'){
             continue;
+        }else {
+            break;
         }		
     }
     return 0;
